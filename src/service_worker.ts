@@ -3,17 +3,10 @@ let onAuthRequiredHandler;
 // https://developer.chrome.com/docs/extensions/reference/api/proxy
 async function setProxy(enabled, proxy) {
   console.log("Updating proxy configuration", enabled, proxy);
+
   if (!enabled) {
     chrome.action.setIcon({ path: "/icons/disabled-24.png" });
-    const current = await chrome.proxy.settings.get({});
-    if (current.value.mode === "system") return;
-
-    await chrome.proxy.settings.set({
-      value: {
-        mode: "system",
-      },
-      scope: "regular",
-    });
+    await chrome.proxy.settings.clear({});
     return;
   }
 
