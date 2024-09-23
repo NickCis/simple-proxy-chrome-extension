@@ -1,0 +1,465 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      /* -- Reset -- */
+      *,
+      :after,
+      :before {
+        box-sizing: border-box;
+        border: 0 solid #e5e7eb;
+      }
+
+      :after,
+      :before {
+        --tw-content: "";
+      }
+
+      html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        font-family:
+          var(--font-geist-sans),
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          "Noto Sans",
+          sans-serif,
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+          "Noto Color Emoji";
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+      }
+
+      body {
+        margin: 0;
+        line-height: inherit;
+      }
+
+      hr {
+        height: 0;
+        color: inherit;
+        border-top-width: 1px;
+      }
+
+      abbr:where([title]) {
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+
+      b,
+      strong {
+        font-weight: bolder;
+      }
+
+      code,
+      kbd,
+      pre,
+      samp {
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          Liberation Mono,
+          Courier New,
+          monospace;
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        font-size: 1em;
+      }
+
+      small {
+        font-size: 80%;
+      }
+
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+
+      sub {
+        bottom: -0.25em;
+      }
+
+      sup {
+        top: -0.5em;
+      }
+
+      table {
+        text-indent: 0;
+        border-color: inherit;
+        border-collapse: collapse;
+      }
+
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-feature-settings: inherit;
+        font-variation-settings: inherit;
+        font-size: 100%;
+        font-weight: inherit;
+        line-height: inherit;
+        color: inherit;
+        margin: 0;
+        padding: 0;
+      }
+
+      button,
+      select {
+        text-transform: none;
+      }
+
+      [type="button"],
+      [type="reset"],
+      [type="submit"],
+      button {
+        -webkit-appearance: button;
+        background-color: transparent;
+        background-image: none;
+      }
+
+      :-moz-focusring {
+        outline: auto;
+      }
+
+      :-moz-ui-invalid {
+        box-shadow: none;
+      }
+
+      progress {
+        vertical-align: baseline;
+      }
+
+      ::-webkit-inner-spin-button,
+      ::-webkit-outer-spin-button {
+        height: auto;
+      }
+
+      [type="search"] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+      }
+
+      ::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+
+      summary {
+        display: list-item;
+      }
+
+      blockquote,
+      dd,
+      dl,
+      figure,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      hr,
+      p,
+      pre {
+        margin: 0;
+      }
+
+      fieldset {
+        margin: 0;
+      }
+
+      fieldset,
+      legend {
+        padding: 0;
+      }
+
+      menu,
+      ol,
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      dialog {
+        padding: 0;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      input::-moz-placeholder,
+      textarea::-moz-placeholder {
+        opacity: 1;
+        color: #9ca3af;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        opacity: 1;
+        color: #9ca3af;
+      }
+
+      [role="button"],
+      button {
+        cursor: pointer;
+      }
+
+      :disabled {
+        cursor: default;
+      }
+
+      audio,
+      canvas,
+      embed,
+      iframe,
+      img,
+      object,
+      svg,
+      video {
+        display: block;
+        vertical-align: middle;
+      }
+
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+
+      [hidden] {
+        display: none;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-synthesis-weight: none;
+        text-rendering: optimizeLegibility;
+      }
+
+      /* -- Reset -- */
+      .hidden {
+        display: none;
+      }
+
+      .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+      }
+
+      .space-y-3 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+      }
+
+      .text-sm {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+
+      .font-medium {
+        font-weight: 500;
+      }
+
+      .w-full {
+        width: 100%;
+      }
+      .rounded-md {
+        border-radius: calc(0.5rem - 2px);
+      }
+      .border-input {
+        border-color: hsl(200 5.9% 90%);
+      }
+      .border {
+        border-width: 1px;
+      }
+      .shadow-sm {
+        box-shadow:
+          0 0 #0000,
+          0 0 #0000,
+          0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      }
+      .py-1 {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+      }
+      .py-1 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+      .px-2 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      .px-3 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+      .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .mb-4 {
+        margin-bottom: 1rem;
+      }
+      .h-9 {
+        height: 2.25rem;
+      }
+      .bg-transparent {
+        background-color: transparent;
+      }
+      .text-muted-foreground {
+        color: hsl(240 3.8% 46.1%);
+      }
+      .text-\[0\.8rem\] {
+        font-size: 0.8rem;
+      }
+      .leading-none {
+        line-height: 1;
+      }
+      .flex {
+        display: flex;
+      }
+      .inline-flex {
+        display: inline-flex;
+      }
+      .items-center {
+        align-items: center;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+      .whitespace-nowrap {
+        white-space: nowrap;
+      }
+      .disabled\:opacity-50:disabled {
+        opacity: 0.5;
+      }
+      .disabled\:cursor-not-allowed:disabled {
+        cursor: not-allowed;
+      }
+      .disabled\:pointer-events-none:disabled {
+        pointer-events: none;
+      }
+      .placeholder\:text-muted-foreground::-moz-placeholder {
+        color: hsl(var(240 5% 64.9));
+      }
+
+      .placeholder\:text-muted-foreground::placeholder {
+        color: hsl(var(240 5% 64.9));
+      }
+      .focus-visible\:outline-none:focus-visible {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+      .focus-visible\:ring-1:focus-visible {
+        box-shadow:
+          rgb(255, 255, 255) 0px 0px 0px 0px,
+          rgb(161, 161, 170) 0px 0px 0px 1px,
+          rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+      }
+      .text-destructive {
+        color: hsl(0 72.22% 50.59%);
+      }
+      .bg-primary {
+        background-color: hsl(240 5.9% 10%);
+      }
+      .text-primary-foreground {
+        color: hsl(0 0% 98%);
+      }
+      .shadow {
+        box-shadow:
+          rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+          rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+          rgba(0, 0, 0, 0.1) 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      class="py-1 px-3 space-y-3"
+      autocomplete="off"
+      action=""
+      style="min-width: 25rem"
+    >
+      <div class="flex">
+        <input type="checkbox" name="enabled" />
+        <label class="text-sm leading-none px-2">Enabled</label>
+      </div>
+      <div class="space-y-2">
+        <label class="text-sm font-medium leading-none" data-id="proxy-title"
+          >Proxy URL</label
+        >
+        <input
+          class="w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50"
+          type="text"
+          placeholder="SCHEME://[user:password@]host:port"
+          name="proxy"
+        />
+        <p class="text-[0.8rem] text-muted-foreground">
+          The proxy server to be used for all per-URL requests (that is http,
+          https and ftp). You can supply the authentication credentials in the
+          url.
+        </p>
+        <p
+          class="text-[0.8rem] font-medium text-destructive"
+          data-id="proxy-error-message"
+        >
+          Invalid format
+        </p>
+      </div>
+      <button
+        type="submit"
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow h-9 px-4 py-2"
+        data-id="save-button"
+      >
+        Save
+      </button>
+    </form>
+    <script src="dist/popup.js"></script>
+  </body>
+</html>

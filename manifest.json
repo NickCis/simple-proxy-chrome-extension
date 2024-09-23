@@ -1,0 +1,23 @@
+{
+  "name": "Proxy",
+  "description": "Set up proxy",
+  "manifest_version": 3,
+  "permissions": ["storage", "proxy", "webRequest", "webRequestAuthProvider"],
+  "version": "1.0.0",
+  "icons": {
+    "128": "icons/icon-128.png",
+    "48": "icons/icon-48.png",
+    "32": "icons/icon-32.png",
+    "24": "icons/icon-24.png",
+    "16": "icons/icon-16.png"
+  },
+  "background": {
+    "service_worker": "dist/service_worker.js"
+  },
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_icon": "icons/disabled-24.png",
+    "default_popup": "popup.html",
+    "default_title": "Proxy"
+  }
+}
