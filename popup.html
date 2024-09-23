@@ -385,6 +385,9 @@
       .disabled\:pointer-events-none:disabled {
         pointer-events: none;
       }
+      .opacity-50 {
+        opacity: 0.5;
+      }
       .placeholder\:text-muted-foreground::-moz-placeholder {
         color: hsl(var(240 5% 64.9));
       }
@@ -431,16 +434,19 @@
         <label class="text-sm leading-none px-2">Enabled</label>
       </div>
       <div class="space-y-2">
-        <label class="text-sm font-medium leading-none" data-id="proxy-title"
-          >Proxy URL</label
-        >
+        <label class="text-sm font-medium leading-none" data-id="proxy-title">
+          Proxy URL
+        </label>
         <input
           class="w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50"
           type="text"
           placeholder="SCHEME://[user:password@]host:port"
           name="proxy"
         />
-        <p class="text-[0.8rem] text-muted-foreground">
+        <p
+          class="text-[0.8rem] text-muted-foreground"
+          data-id="proxy-description"
+        >
           The proxy server to be used for all per-URL requests (that is http,
           https and ftp). You can supply the authentication credentials in the
           url.

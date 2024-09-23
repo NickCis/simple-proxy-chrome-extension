@@ -1,10 +1,10 @@
 {
-  "name": "proxy",
+  "name": "simple-proxy-chrome-extension",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple extension to manage proxy configuration.",
   "scripts": {
     "build": "spack",
-    "clean": "rimraf dist proxy-extension-*.zip",
+    "clean": "rimraf dist simple-proxy-chrome-extension-*.zip",
     "dist": "npm run clean && npm run build && npm run package",
     "format": "prettier -w src manifest.json spack.config.js scripts popup.html",
     "launch": "node scripts/launch.js",

@@ -7,7 +7,7 @@ const manifest = require("../manifest.json");
 
 const assets = {
   folders: ["dist", "icons"],
-  files: [],
+  files: ["popup.html"],
 };
 
 const output = `${name}-${version}.zip`;
@@ -28,7 +28,7 @@ async function main() {
   for (const file of assets.files) {
     const local = path.resolve(path.join(__dirname, "..", file));
     console.log(" > Adding file", local, "->", file);
-    zip.addLocalFile(local, file);
+    zip.addLocalFile(local);
   }
 
   console.log(" > Adding manifest.json");

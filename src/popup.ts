@@ -18,6 +18,12 @@ function update(form, checked, proxy) {
     .querySelector('[data-id="proxy-title"]')
     .classList[valid ? "remove" : "add"]("text-destructive");
   form
+    .querySelector('[data-id="proxy-title"]')
+    .classList[checked ? "remove" : "add"]("opacity-50");
+  form
+    .querySelector('[data-id="proxy-description"]')
+    .classList[checked ? "remove" : "add"]("opacity-50");
+  form
     .querySelector('[data-id="proxy-error-message"]')
     .classList[valid ? "add" : "remove"]("hidden");
 }
@@ -33,11 +39,13 @@ window.addEventListener("load", async () => {
     const enabled = form.enabled.checked;
     const proxy = form.proxy.value;
     const valid = validateProxy(proxy);
-    if (!enabled || valid)
+    if (!enabled || valid) {
       await chrome.storage.session.set({
         enabled,
         proxy: valid ? proxy : "",
       });
+      window.close();
+    }
   });
 
   form.enabled.addEventListener("change", async (ev) => {

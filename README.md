@@ -1,4 +1,4 @@
-# Proxy extension
+# Simple Proxy chrome extension
 
  - [Extensions - Chrome for Developers](https://developer.chrome.com/docs/extensions/)
  - [`manifest.json` file](https://developer.chrome.com/docs/extensions/mv3/manifest/)

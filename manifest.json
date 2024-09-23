@@ -1,6 +1,6 @@
 {
-  "name": "Proxy",
-  "description": "Set up proxy",
+  "name": "Simple Proxy",
+  "description": "A simple extension to manage proxy configuration (allows setting auth credentials for http/s proxies)",
   "manifest_version": 3,
   "permissions": ["storage", "proxy", "webRequest", "webRequestAuthProvider"],
   "version": "1.0.0",
