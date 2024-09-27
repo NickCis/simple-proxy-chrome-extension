@@ -1,3 +1,5 @@
+[![Available in the Chrome Web Store](./available-in-the-chrome-web-store.png)](https://chromewebstore.google.com/detail/simple-proxy/nlppfikpicmibfnkampeaekgjfajhfdb)
+
 # Simple Proxy chrome extension
 
  - [Extensions - Chrome for Developers](https://developer.chrome.com/docs/extensions/)
