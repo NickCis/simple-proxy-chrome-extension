@@ -3,7 +3,7 @@
   "description": "A simple extension to manage proxy configuration (allows setting auth credentials for http/s proxies)",
   "manifest_version": 3,
   "permissions": ["storage", "proxy", "webRequest", "webRequestAuthProvider"],
-  "version": "1.0.1",
+  "version": "1.0.2",
   "icons": {
     "128": "icons/icon-128.png",
     "48": "icons/icon-48.png",
