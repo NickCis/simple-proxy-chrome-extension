@@ -1,6 +1,6 @@
 {
   "name": "simple-proxy-chrome-extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple extension to manage proxy configuration.",
   "scripts": {
     "build": "spack",
