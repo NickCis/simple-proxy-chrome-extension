@@ -19,5 +19,9 @@
     "default_icon": "icons/disabled-24.png",
     "default_popup": "popup.html",
     "default_title": "Proxy"
+  },
+  "options_ui": {
+    "page": "popup.html",
+    "open_in_tab": false
   }
 }
